@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+/* Get some good fonts there later */
+
+body{
+    background-color: rgb(104, 64, 64);
+    color: rgb(202, 198, 189);
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar{
+    /* overflow: hidden; */
+    background-color: #333;
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    /* height: 50%; */
+    background-color: beige;
+    font-size: 45px;
+    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbarContainer{
+    display: flex;
+    /* padding: 50px; */
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbarContainer > ul{
+    justify-content: right;
 }
 
-.App-link {
-  color: #61dafb;
+#dupa{
+    /* justify-content: center; */
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li{
+    display: inline; 
+    padding-right: 50px;
+}
+
+a {
+    /* padding: 8px; */
+    color: rgb(109, 34, 34);
+}
+
+a:hover {
+    color: rgb(34, 34, 18);
 }
