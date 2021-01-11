@@ -1,38 +1,10 @@
 /* Get some good fonts there later */
 
 body{
-    background-color: rgb(37, 35, 35);
+    background-color: rgb(53, 54, 52);
     color: rgb(202, 198, 189);
     margin: 0;
     padding: 0;
-}
-
-.navbar{
-    /* overflow: hidden; */
-    background-color: rgb(63, 52, 52);
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-    /* height: 50%; */
-    background-color: rgb(170, 170, 143);
-    font-size: 45px;
-    
-}
-
-.navbarContainer{
-    display: flex;
-    /* padding: 50px; */
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 50px;
-    padding-left: 50px;
-}
-
-#storeName{
-    color: rgb(55, 141, 120);
-}
-
-.navbarContainer > ul{
-    justify-content: right;
 }
 
 .contentContainer{
@@ -41,17 +13,5 @@ body{
     font-size: 2rem;
 }
 
-li{
-    display: inline; 
-    padding-right: 50px;
-}
 
-a {
-    /* padding: 8px; */
-    color: rgb(109, 34, 34);
-    text-decoration: none;
-}
 
-a:hover {
-    color: rgb(34, 34, 18);
-}

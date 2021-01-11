@@ -2,7 +2,7 @@ import React from "react"
 import {Link} from "react-router-dom"
 import "./Navbar.css"
 
-function Navbar(){
+function Navbar(props){
     return(
         <div className="navbar">
             <div className="navbarContainer">
@@ -14,7 +14,7 @@ function Navbar(){
                         </li>
 
                         <li>
-                            <Link to="/checkout">Checkout</Link>
+                            <Link to="/checkout">{`Checkout (${props.itemCounter})`}</Link>
                         </li>
                     </ul>
                 </div>

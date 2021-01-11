@@ -1,0 +1,23 @@
+.storeContainer{
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-between; */
+    margin: 0;
+    padding: 5rem 5rem 5rem 5rem;
+    height: 25rem;
+}
+
+.storeContainer > div{
+    
+    color: black;
+    width: 100%;
+    height: 100%;
+
+    background-color: beige;
+    border: 2px solid rgb(230, 8, 8);
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 5rem; */
+}
