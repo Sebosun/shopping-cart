@@ -1,7 +1,7 @@
 /* Get some good fonts there later */
 
 body{
-    background-color: rgb(104, 64, 64);
+    background-color: rgb(37, 35, 35);
     color: rgb(202, 198, 189);
     margin: 0;
     padding: 0;
@@ -9,11 +9,11 @@ body{
 
 .navbar{
     /* overflow: hidden; */
-    background-color: #333;
+    background-color: rgb(63, 52, 52);
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
     /* height: 50%; */
-    background-color: beige;
+    background-color: rgb(170, 170, 143);
     font-size: 45px;
     
 }
@@ -27,13 +27,18 @@ body{
     padding-left: 50px;
 }
 
+#storeName{
+    color: rgb(55, 141, 120);
+}
+
 .navbarContainer > ul{
     justify-content: right;
 }
 
-#dupa{
-    /* justify-content: center; */
-    
+.contentContainer{
+    color: rgb(123, 156, 86);
+    padding: 2rem;
+    font-size: 2rem;
 }
 
 li{
@@ -44,6 +49,7 @@ li{
 a {
     /* padding: 8px; */
     color: rgb(109, 34, 34);
+    text-decoration: none;
 }
 
 a:hover {
