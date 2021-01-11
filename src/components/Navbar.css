@@ -1,0 +1,36 @@
+.navbar{
+    background-color: rgb(63, 52, 52);
+    top: 0; 
+    width: 100%; 
+    background-color: rgb(170, 170, 143);
+    font-size: 45px;
+    
+}
+
+.navbarContainer{
+    display: flex;
+    /* padding: 50px; */
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.navbarContainer > ul{
+    justify-content: right;
+}
+
+li{
+    display: inline; 
+    padding-right: 50px;
+}
+
+a {
+    /* padding: 8px; */
+    color: rgb(109, 34, 34);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(34, 34, 18);
+}
