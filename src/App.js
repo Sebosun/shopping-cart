@@ -10,6 +10,30 @@ import Checkout from "./components/Checkout"
 export default function App() {
 
   const [itemCounter, setItemCounter] = useState(0);
+  const [items, changeItems] = useState([
+    {
+      name: 'cat',
+      image: 'https://i.imgur.com/Jvh1OQm.jpg',
+      price: 25,
+      description: 'A very sleepy qute cat'
+    },
+    {
+      name: 'dog',
+      image: 'https://i.imgur.com/H37kxPH.jpg' ,
+      price: 35,
+      description: 'Military dog perfect for your private army'
+    },
+    {
+      name: 'frog',
+      image: 'https://i.imgur.com/vKb4qnU.jpg',
+      price: 45,
+      description: 'rare frog species, available for a limited time'
+    },
+
+  ]);
+
+
+  
 
   return (
     <BrowserRouter>
@@ -23,6 +47,7 @@ export default function App() {
             <Store 
               itemCounter={itemCounter}
               setItemCounter={setItemCounter}
+              items={items}
             />
           </Route>
           <Route path="/checkout" component={Checkout} />
