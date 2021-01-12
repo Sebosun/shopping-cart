@@ -14,6 +14,9 @@ export default function Store(props){
                             <div style={{textTransform: 'capitalize'}}>{item.name}</div>
                             <div>{item.price}</div>
                             <div>{item.description}</div>
+                            {/* TODO: WHEN THE BUTTON IS PRESSED FOWRARD THE OBJECT TO A PROP/FUNCTION,
+                                CHECK IF IT EXISTS, AND ADD +1 TO THE CURRENT COUNT
+                                THIS WILL LATER BE USED IN THE CHECKOUT */}
                             <button>Add to cart</button>
                         </div>
                     )
