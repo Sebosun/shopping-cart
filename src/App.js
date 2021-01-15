@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import {React, useState, useEffect} from "react";
 import './App.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 
@@ -48,6 +48,17 @@ export default function App() {
       return newArray
     })
   };
+
+  useEffect(() => {
+    let itemCount = 0;
+    // for (const item in items)
+    console.log(`items state changed`)
+    for (let i = 0; i < items.length; i++){
+        itemCount += items[i].count
+        console.log(itemCount)
+    }
+    setItemCounter(() => itemCount);
+  }, [items])
 
   return (
     <BrowserRouter>
