@@ -10,7 +10,6 @@ import Checkout from "./components/Checkout"
 export default function App() {
 
   const [itemCounter, setItemCounter] = useState(0);
-  // ¿¡¿£¡¿£¡
   const [items, setItems] = useState([
     {
       name: 'cat',
@@ -35,7 +34,17 @@ export default function App() {
     }
   ]);
 
-  const [cart, setCart] = useState([]);
+  // monitors when items are changed, and adjusts the itemCounter accordingly
+  useEffect(() => {
+    let itemCount = 0;
+    // for (const item in items)
+    console.log(`items state changed`)
+    for (let i = 0; i < items.length; i++){
+        itemCount += items[i].count
+        console.log(itemCount)
+    }
+    setItemCounter(() => itemCount);
+  }, [items])
 
   let addItems = (item, index) => {
     setItems(prev => {
@@ -48,17 +57,6 @@ export default function App() {
       return newArray
     })
   };
-
-  useEffect(() => {
-    let itemCount = 0;
-    // for (const item in items)
-    console.log(`items state changed`)
-    for (let i = 0; i < items.length; i++){
-        itemCount += items[i].count
-        console.log(itemCount)
-    }
-    setItemCounter(() => itemCount);
-  }, [items])
 
   return (
     <BrowserRouter>
@@ -76,14 +74,12 @@ export default function App() {
               itemCounter={itemCounter}
               setItemCounter={setItemCounter}
               items={items}
-              cart={cart}
               addItems={addItems}
             />
           </Route>
           <Route path="/checkout">
             <Checkout
-              cart={cart}
-              setCart={setCart}
+              items={items}
             />
 
           </Route>

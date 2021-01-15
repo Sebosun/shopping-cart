@@ -2,17 +2,29 @@ import React from "react"
 import "./Checkout.css";
 
 export default function Checkout(props){
+	let buttonDisplay = false;
     return(
-        <div className="checkoutContainer">
-            <div>
-            	c
-            </div>
-            <div>
-            	b
-            </div>
-            <div>
-            	a
-            </div>
+        <div class="checkoutContainer">
+        	{   
+                props.items.map((item, index)=>{
+                	{if (item.count > 0){
+                		buttonDisplay = true;
+                	
+                	return(
+                        <div key={`${index}`} className="item">
+                        	<img src={item.image} alt={item.name} className="checkoutImage"></img>
+                        	<div className="itemInfo">
+                        		<div> {item.name} </div>
+                        		<div>Quantity: {item.count}</div>
+                        		<div>Price: ${item.price * item.count}</div>
+                        	</div>
+                        </div>
+                        )
+                	}
+                	}
+                })
+
+            }
         </div>
     )
 }

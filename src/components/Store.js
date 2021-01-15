@@ -11,7 +11,7 @@ export default function Store(props){
                 props.items.map((item, index)=>{
                     return(
                         <div key={index} className='product'>
-                            <img src={item.image} alt={`Image of an ${item.name}`}></img>
+                            <img src={item.image} alt={`${item.name}`}></img>
                             {/* using text transform to make it capitalized, pretty wierd there's no inbuild js method tbh */}
                             <div>{item.description}</div>
                             <div style={{textTransform: 'capitalize'}}>{item.name}</div>
