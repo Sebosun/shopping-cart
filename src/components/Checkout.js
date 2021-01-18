@@ -25,6 +25,7 @@ export default function Checkout(props){
                 })
 
             }
+            <button style={{display: buttonDisplay ? 'block':'none'}}>Proceed to payment</button>
         </div>
     )
 }
