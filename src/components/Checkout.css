@@ -26,6 +26,11 @@
 	grid-template-rows: 50px 50px 2fr;
 }
 
+.total{
+	padding: 2rem 0 2rem 0;
+	justify-self: center;
+}
+
 .checkoutImage{
 	/* height: 10rem; */
 
