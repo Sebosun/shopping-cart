@@ -68,7 +68,7 @@ export default function App() {
     event.preventDefault();
     setItems((prev) => {
       let newArray = [...prev];
-      newArray[index] = {...newArray[index], count: newArray[index].tempCount};
+      newArray[index] = {...newArray[index], count: prev[index].count + newArray[index].tempCount};
       newArray[index] = {...newArray[index], tempCount: 0};
       return newArray;
     });
