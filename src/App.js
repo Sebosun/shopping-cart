@@ -52,17 +52,41 @@ export default function App() {
     setItemCounter(() => itemCount);
   }, [items])
 
-  let addItems = (item, index) => {
-    setItems(prev => {
-      let itemIndex = prev.indexOf(item);
-      // spread the prev array to a new array
+  // let addItems = (item, index) => {
+  //   setItems(prev => {
+  //     let itemIndex = prev.indexOf(item);
+  //     // spread the prev array to a new array
+  //     let newArray = [...prev];
+  //     // using itemIndex, find the prev array and replace count wiht prev.count + 1
+  //     newArray[itemIndex] = {...newArray[itemIndex], count: prev[itemIndex].count + 1};
+  //     console.log(newArray);
+  //     return newArray
+  //   })
+  // };
+
+  let addItems = (event, index) => {
+    event.preventDefault();
+    setItems((prev) => {
       let newArray = [...prev];
-      // using itemIndex, find the prev array and replace count wiht prev.count + 1
-      newArray[itemIndex] = {...newArray[itemIndex], count: prev[itemIndex].count + 1};
-      console.log(newArray);
-      return newArray
-    })
+      newArray[index] = {...newArray[index], count: newArray[index].tempCount};
+      newArray[index] = {...newArray[index], tempCount: 0};
+      return newArray;
+    });
   };
+
+  let changeTempQuantity = (event, index) => {
+    event.preventDefault();
+    // gets the value data from event.target and sets it to variable 'value'
+    const {value} = event.target
+    setItems((prev) => {
+      let newArray = [...prev];
+      // the value saved is text, fixing it to be an int here to prevent further issues
+      newArray[index] = {...newArray[index], tempCount: parseInt(value)};
+      return newArray;
+    })
+    console.log(items)
+  }
+  
 
   return (
     <BrowserRouter>
@@ -81,6 +105,7 @@ export default function App() {
               addItems={addItems}
               quantity={quantity}
               setQuantity={setQuantity}
+              changeTempQuantity={changeTempQuantity}
             />
           </Route>
           <Route path="/checkout">

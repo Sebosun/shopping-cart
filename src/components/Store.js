@@ -18,7 +18,22 @@ export default function Store(props){
 
                             <div>${item.price}</div>
                             
-                            <button onClick={() => props.addItems(item, index)}>Add to cart</button>
+                            {/* <button onClick={() => props.addItems(item, index)}>Add to cart</button> */}
+                            <form onSubmit={(e) => {
+                                props.addItems(e, index)}
+                            }>
+                                <input
+                                    placeholder={"1"}
+                                    value={item.tempCount}
+                                    onChange={(e) => 
+                                        props.changeTempQuantity(e, index)
+                                        }
+                                    type={'number'}
+                                    min={1}
+                                    max={100}
+                                />
+                                <button>Submit</button>
+                            </form>
                         </div>
                     )
                 })

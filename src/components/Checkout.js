@@ -12,9 +12,9 @@ export default function Checkout(props){
                 	
                 	return(
                         <div key={`${index}`} className="item">
-                        	<img src={item.image} alt={item.name} className="checkoutImage"></img>
+                        	<img src={item.image} alt={item.name} className="checkoutImage" ></img>
                         	<div className="itemInfo">
-                        		<div> {item.name} </div>
+                        		<div style={{textTransform: 'capitalize'}}> {item.name} </div>
                         		<div>Quantity: {item.count}</div>
                         		<div>Price: ${item.price * item.count}</div>
                         	</div>
