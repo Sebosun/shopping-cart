@@ -34,7 +34,7 @@ export default function App() {
       name: 'frog',
       image: 'https://i.imgur.com/vKb4qnU.jpg',
       price: 45,
-      description: 'Rare frog species, available for a limited time',
+      description: 'Rare frog species',
       count: 0,
       tempCount: 1,
     }
