@@ -4,6 +4,7 @@
     width: 100%; 
     background-color: rgb(26, 26, 23);
     font-size: 2rem;
+    min-height: 9vh;
     
 }
 
