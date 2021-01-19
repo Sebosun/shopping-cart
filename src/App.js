@@ -20,7 +20,7 @@ export default function App() {
       price: 25,
       description: 'A very sleepy qute cat',
       count: 0,
-      tempCount: 0,
+      tempCount: 1,
     },
     {
       name: 'dog',
@@ -28,7 +28,7 @@ export default function App() {
       price: 35,
       description: 'Military dog perfect for your private army',
       count: 0,
-      tempCount: 0,
+      tempCount: 1,
     },
     {
       name: 'frog',
@@ -36,7 +36,7 @@ export default function App() {
       price: 45,
       description: 'Rare frog species, available for a limited time',
       count: 0,
-      tempCount: 0,
+      tempCount: 1,
     }
   ]);
 
@@ -64,16 +64,18 @@ export default function App() {
   //   })
   // };
 
+  // changes items quantity after 'submit' button is pressed, which makes cart appear in checkout
   let addItems = (event, index) => {
     event.preventDefault();
     setItems((prev) => {
       let newArray = [...prev];
       newArray[index] = {...newArray[index], count: prev[index].count + newArray[index].tempCount};
-      newArray[index] = {...newArray[index], tempCount: 0};
+      newArray[index] = {...newArray[index], tempCount: 1};
       return newArray;
     });
   };
 
+  // changes changeTemp quantity in 'items' state, afterwards it'll be used to change quantity for good
   let changeTempQuantity = (event, index) => {
     event.preventDefault();
     // gets the value data from event.target and sets it to variable 'value'
